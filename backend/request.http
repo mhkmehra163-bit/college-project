@@ -1,0 +1,55 @@
+
+GET http://localhost:4001/userapi/users/admin
+
+###
+
+POST http://localhost:4001/userapi/new-user
+Content-Type: application/json
+
+{
+    "name":"ravi"
+}
+###
+DELETE   http://localhost:4001/userapi/users/ravi
+
+
+###
+
+PUT  http://localhost:4001/userapi/users/raviUpdated
+Content-Type: application/json
+
+{
+    "name":"ravi"
+}
+
+###
+
+POST http://localhost:4001/pdfapi/upload
+
+###
+
+GET http://localhost:4001/pdfapi/get
+
+
+###
+
+GET http://localhost:4001/pdfapi/pdfFile
+Content-Type: application/json
+
+{
+    "name": "new ",
+    "date": "2024-06-11",
+    "category": "exams"
+}
+
+
+###
+
+DELETE  http://localhost:4001/pdfapi/pdfFile
+Content-Type: application/json
+
+{
+    "name": "new ",
+    "date": "2024-06-11",
+    "category": "exams"
+}
