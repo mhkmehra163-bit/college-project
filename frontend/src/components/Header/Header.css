@@ -1,0 +1,23 @@
+.header{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    margin: 0px;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url('https://img.freepik.com/free-photo/dark-blue-paint-minimal-background_53876-102518.jpg');
+    background-size: cover; 
+    background-position: center;
+}
+.vnr-logo{
+    padding-top: 15px;
+    padding-right: 15px;
+    width: 50px;
+    height: 50px;
+}
+.vnr{
+    color: white;
+}

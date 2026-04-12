@@ -1,0 +1,116 @@
+.outer-container{
+ 
+    display: flex;
+    margin-top: 5%;
+    height: 90vh;
+    justify-content: center;
+    background-image: url('https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover; 
+    background-position: center;
+    opacity: 0.9;
+}
+.container,.containerl {
+    padding: 80px 40px;
+    border-radius: 40px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: rgba(34, 48, 54, 0.878) 15px 30px 30px -20px;
+    margin: 100px 0 7% 0;
+
+  }
+  .container{
+    background: rgba(175, 183, 226, 0.205);
+
+  }
+  .containerl{
+    background: rgba(248, 249, 253, 0.7);
+
+  }
+
+  .radio-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+
+.admin-radio,
+.staff-radio {
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.radio-lable{
+
+    font-size: 20px;
+    font-weight: 800;
+}
+  
+  .heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: rgb(16, 137, 211);
+  }
+  
+  .form {
+    margin-top: 20px; 
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form .input {
+    background: white;
+    width: 45vh;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    box-shadow: #4f7688 0px 7px 10px -5px;
+    border-inline: 2px solid transparent;
+  }
+  
+  .form .input::-moz-placeholder {
+    color: rgb(170, 170, 170);
+  }
+  
+  .form .input::placeholder {
+    color: rgb(170, 170, 170);
+  }
+  
+  .form .input:focus {
+    outline: none;
+    border-inline: 2px solid #12B1D1;
+  }
+  
+  .form .forgot-password {
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  
+  
+  .form .login-button {
+    margin-top: 20px;
+    display: block;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+    color: white;
+    padding-block: 15px;
+    border-radius: 20px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form .login-button:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+  }
+  
+  .form .login-button:active {
+    transform: scale(0.95);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+  }
+
+  

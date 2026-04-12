@@ -1,0 +1,49 @@
+/* FilteringComponent.css */
+
+.filtering-container {
+  position: fixed;
+  top: 20%;
+  left: 35%;
+  
+  
+  }
+  
+  .filtering-label {
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  .filtering-select,
+  .filtering-input {
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .filtering-input {
+    flex-grow: 1; /* Allow the input to grow and fill the available space */
+  }
+  
+  .filtering-button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filtering-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .filtering-button:active {
+    background-color: #00418c;
+  }
+  
+  h3{
+    margin-left: 140px;
+  }

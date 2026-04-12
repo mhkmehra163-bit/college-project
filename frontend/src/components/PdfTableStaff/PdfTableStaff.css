@@ -1,0 +1,44 @@
+/* DataTable.css */
+
+/* Style for the whole DataTable component */
+.data-table-container {
+    margin:50px 150px;
+  }
+  
+  /* Style for the table */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Style for table headers */
+  .data-table th,
+  .data-table td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Style for table headers */
+  .data-table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for even rows */
+  .data-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for rows on hover */
+  .data-table tbody tr:hover {
+    background-color: #ddd;
+  }
+
+
+ .row-hover:hover {
+    cursor: pointer;
+    padding: 8px;
+    transform: scale(1.01);
+    transition: 0.3s;
+
+
+ }

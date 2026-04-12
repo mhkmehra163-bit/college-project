@@ -1,0 +1,10 @@
+.latest-container{
+
+    display: flex;
+    margin-top: 40px;
+}
+.latest-icon{
+    margin-left: 100px;
+    width: 70px;
+    height: 70px;
+}
