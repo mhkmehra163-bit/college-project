@@ -5,9 +5,9 @@ const cors = require("cors");
 app.use(cors()); // keep simple for now
 
 const mc = require("mongodb").MongoClient;
+const mongoUrl = 'mongodb+srv://mhkproject:passcodeis123@cluster0.dqwjbw1.mongodb.net/circularRepository?retryWrites=true&w=majority';
 
-// ❗ Replace with your MongoDB Atlas URL directly
-mc.connect("YOUR_MONGODB_ATLAS_URL")
+mc.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(client => {
     console.log("DB CONNECTED...!");
 
