@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import './AddUser.css'
 import axios from 'axios';
+import { API_BASE_URL } from '../../api';
 const AddUser = () => {
 
     let { register, handleSubmit } = useForm();
@@ -14,7 +15,7 @@ const AddUser = () => {
     } else {
     
     
-       axios.post('http://localhost:4001/userapi/new-user',userCrdentialsObject,{
+       axios.post(`${API_BASE_URL}/userapi/new-user`,userCrdentialsObject,{
           headers: {
               'Content-Type': "application/json"
           }

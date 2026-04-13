@@ -3,13 +3,14 @@ import './PdfTableStaff.css'
 import download from '../assets/download.png'
 import axios from 'axios';
 import { PdfContext } from '../Context/pdfContext';
+import { API_BASE_URL } from '../../api';
 
 const PdfTable = () => {
   const { data } = useContext(PdfContext);
 
   let handlePdfView=async (item)=>{
     try {
-      const response = await axios.get('http://localhost:4001/pdfapi/pdfFile', {
+      const response = await axios.get(`${API_BASE_URL}/pdfapi/pdfFile`, {
         params: {
           name: item.name,
           date: item.date,

@@ -3,13 +3,14 @@ import './PdfTableAdmin.css'
 import delete_icon from '../assets/delete_icon.png'
 import axios from 'axios';
 import { PdfContext } from '../Context/pdfContext';
+import { API_BASE_URL } from '../../api';
 
 const PdfTableAdmin = () => {
   const { data } = useContext(PdfContext);
 
   let handlePdfView=async (item)=>{
     try {
-      const response = await axios.get('http://localhost:4001/pdfapi/pdfFile', {
+      const response = await axios.get(`${API_BASE_URL}/pdfapi/pdfFile`, {
         params: {
           name: item.name,
           date: item.date,
@@ -32,7 +33,7 @@ const PdfTableAdmin = () => {
 
   const handleDelete=async (event,item)=>{
     event.stopPropagation(); 
-    await axios.delete(`http://localhost:4001/pdfapi/pdfFile`,
+    await axios.delete(`${API_BASE_URL}/pdfapi/pdfFile`,
       {
         params: {
           name: item.name,

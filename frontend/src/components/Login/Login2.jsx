@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './Login2.css'; // Import the CSS file
 import Header from '../Header/Header';
 import axios from 'axios';
+import { API_BASE_URL } from '../../api';
 
 function Login2() {
  
@@ -12,7 +13,7 @@ function Login2() {
 
   
   const onLoginFormSubmit = (userCredentialsObject) => {
-    axios.get(`http://localhost:4001/userapi/users/${userCredentialsObject.username}`)
+    axios.get(`${API_BASE_URL}/userapi/users/${userCredentialsObject.username}`)
       .then(res => {
         if (res.data.payload) {
           const {password , role} = res.data.payload

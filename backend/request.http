@@ -18,7 +18,7 @@ DELETE   http://localhost:4001/userapi/users/ravi
 PUT  http://localhost:4001/userapi/users/raviUpdated
 Content-Type: application/json
 
-{
+{   
     "name":"ravi"
 }
 

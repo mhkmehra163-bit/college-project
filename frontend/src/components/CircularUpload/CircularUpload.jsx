@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { API_BASE_URL } from '../../api';
 import './CircularUpload.css';
 
 const CircularUpload = () => {
@@ -49,7 +50,7 @@ const CircularUpload = () => {
         formData.append("category", category);
 
         try {
-            await axios.post('http://localhost:4001/pdfapi/upload', formData, {
+            await axios.post(`${API_BASE_URL}/pdfapi/upload`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

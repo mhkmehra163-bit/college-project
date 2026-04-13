@@ -1,13 +1,14 @@
 import { useForm } from 'react-hook-form';
 import './DeleteUser.css'
 import axios from 'axios'
+import { API_BASE_URL } from '../../api';
 
     const DeleteUser=()=>{
       const{register,handleSubmit}=useForm()
 
       function deleteUser(data) {
         try{
-          axios.delete(`http://localhost:4001/userapi/delete-user/${data.username}`)
+          axios.delete(`${API_BASE_URL}/userapi/delete-user/${data.username}`)
           .then(res=>{
               if(res.status ===200)
                 alert("User Deleted !!")

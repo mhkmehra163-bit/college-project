@@ -2,6 +2,7 @@
 import { createContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import { API_BASE_URL } from '../../api';
 
 const PdfContext = createContext();
 
@@ -9,7 +10,7 @@ const PdfProvider = ({ children }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:4001/pdfapi/get')
+    axios.get(`${API_BASE_URL}/pdfapi/get`)
       .then(res => {
         const initialData = res.data.payload;
         setData(initialData);
