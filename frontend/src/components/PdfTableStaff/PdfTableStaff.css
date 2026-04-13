@@ -1,26 +1,30 @@
 /* DataTable.css */
 
-/* Style for the whole DataTable component */
+/* Style for the table container */
 .data-table-container {
-    margin:50px 150px;
+    margin: clamp(20px, 5vw, 50px) clamp(20px, 8vw, 150px);
+    overflow-x: auto;
   }
   
   /* Style for the table */
   .data-table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 600px;
   }
   
   /* Style for table headers */
   .data-table th,
   .data-table td {
-    padding: 8px;
+    padding: clamp(6px, 2vw, 8px);
     text-align: left;
+    font-size: clamp(12px, 2vw, 14px);
   }
   
   /* Style for table headers */
   .data-table th {
     background-color: #f2f2f2;
+    font-weight: 600;
   }
   
   /* Style for even rows */
@@ -33,12 +37,35 @@
     background-color: #ddd;
   }
 
-
  .row-hover:hover {
     cursor: pointer;
-    padding: 8px;
+    padding: clamp(6px, 2vw, 8px);
     transform: scale(1.01);
     transition: 0.3s;
+ }
 
+ @media (max-width: 768px) {
+   .data-table-container {
+     margin: 20px 10px;
+   }
+   .data-table th,
+   .data-table td {
+     padding: 6px 5px;
+     font-size: 12px;
+   }
+ }
 
+ @media (max-width: 480px) {
+   .data-table-container {
+     margin: 15px 5px;
+     overflow-x: auto;
+   }
+   .data-table {
+     font-size: 11px;
+   }
+   .data-table th,
+   .data-table td {
+     padding: 4px 3px;
+     font-size: 11px;
+   }
  }

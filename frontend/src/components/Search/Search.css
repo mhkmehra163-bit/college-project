@@ -4,25 +4,33 @@
   position: fixed;
   top: 20%;
   left: 35%;
-  
-  
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 5px;
+  z-index: 5;
+}
   
   .filtering-label {
     margin-right: 10px;
     color: #333;
+    font-size: clamp(12px, 2vw, 14px);
   }
   
   .filtering-select,
   .filtering-input {
     margin-right: 10px;
-    padding: 8px;
+    padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: clamp(12px, 2vw, 14px);
   }
   
   .filtering-input {
-    flex-grow: 1; /* Allow the input to grow and fill the available space */
+    flex-grow: 1;
+    min-width: 150px;
   }
   
   .filtering-button {
@@ -34,6 +42,7 @@
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: clamp(12px, 2vw, 14px);
   }
   
   .filtering-button:hover {
@@ -45,5 +54,39 @@
   }
   
   h3{
-    margin-left: 140px;
+    margin-left: clamp(50px, 10vw, 140px);
+    font-size: clamp(14px, 3vw, 18px);
+  }
+
+  @media (max-width: 1024px) {
+    .filtering-container {
+      left: 30%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .filtering-container {
+      position: relative;
+      top: auto;
+      left: auto;
+      margin: 10px 0;
+      width: calc(100% - 20px);
+      flex-direction: column;
+    }
+    h3 {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .filtering-container {
+      flex-direction: column;
+    }
+    .filtering-select,
+    .filtering-input,
+    .filtering-button {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
   }

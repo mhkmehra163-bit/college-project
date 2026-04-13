@@ -6,7 +6,7 @@ const Header = () => {
         <div className="header">
             
             <img className='vnr-logo' src={vnr_log} alt="" />
-        <h2 className='vnr'>VNR VJIET - Circular Repository</h2>
+        <h2 className='vnr'>Mehak University - Circular Repository</h2>
         </div>
     );
 };

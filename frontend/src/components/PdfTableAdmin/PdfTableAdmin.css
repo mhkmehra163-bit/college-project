@@ -1,31 +1,38 @@
 /* DataTable.css */
 
-/* Style for the whole DataTable component */
+/* Style for the table container */
 .data-table-container {
-position: fixed;
-top: 27%;
-bottom: 0%;
-left: 15%;
-right: 0%;
+  position: fixed;
+  top: 27%;
+  bottom: 0%;
+  left: 15%;
+  right: 0%;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 10px;
 }
   
   /* Style for the table */
   .data-table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 600px;
   }
   
   /* Style for table headers */
   
   .data-table th,
   .data-table td {
-    padding: 8px;
+    padding: clamp(8px, 2vw, 12px);
     text-align: left;
+    font-size: clamp(12px, 2vw, 14px);
+    white-space: nowrap;
   }
   
   /* Style for table headers */
   .data-table th {
     background-color: #f2f2f2;
+    font-weight: 600;
   }
   
   /* Style for even rows */
@@ -38,13 +45,12 @@ right: 0%;
     background-color: #ddd;
   }
  .delete-icon{
-    width: 20px;
+    width: clamp(18px, 4vw, 20px);
     cursor: pointer;
  }
  .download-icon{
   cursor: pointer;
-  width: 25px;
-
+  width: clamp(20px, 4vw, 25px);
  }
  .delete-icon:hover,
  .download-icon:hover{
@@ -54,9 +60,50 @@ right: 0%;
 
  .row-hover:hover {
     cursor: pointer;
-    padding: 8px;
+    padding: clamp(8px, 2vw, 12px);
     transform: scale(1.01);
     transition: 0.3s;
+ }
 
+ @media (max-width: 1024px) {
+  .data-table-container {
+    left: 18%;
+  }
+ }
 
+ @media (max-width: 768px) {
+  .data-table-container {
+    top: 28%;
+    left: 20%;
+    right: 0;
+    padding: 5px;
+  }
+  .data-table th,
+  .data-table td {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  .delete-icon,
+  .download-icon {
+    width: 18px;
+  }
+ }
+
+ @media (max-width: 480px) {
+  .data-table-container {
+    top: 30%;
+    left: 0;
+    right: 0;
+    position: relative;
+    padding: 5px;
+  }
+  .data-table th,
+  .data-table td {
+    padding: 5px 6px;
+    font-size: 11px;
+  }
+  .delete-icon,
+  .download-icon {
+    width: 16px;
+  }
  }

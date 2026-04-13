@@ -4,10 +4,12 @@
     top: 0px;
     z-index: 10;
     margin: 0px;
-    padding: 5px;
+    padding: 5px 10px;
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 10px;
     background-image: url('https://img.freepik.com/free-photo/dark-blue-paint-minimal-background_53876-102518.jpg');
     background-size: cover; 
     background-position: center;
@@ -17,7 +19,42 @@
     padding-right: 15px;
     width: 50px;
     height: 50px;
+    flex-shrink: 0;
 }
 .vnr{
     color: white;
+    font-size: clamp(16px, 4vw, 24px);
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .vnr-logo {
+        width: 40px;
+        height: 40px;
+        padding-right: 10px;
+    }
+    .vnr {
+        font-size: clamp(14px, 3vw, 18px);
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .vnr-logo {
+        padding-top: 8px;
+        padding-right: 0;
+    }
+    .vnr {
+        font-size: 14px;
+    }
 }
